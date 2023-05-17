@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply box-border;
+  }
+
+  * {
+    @apply m-0 p-0 font-main tracking-wide text-white;
+  }
+
+  html {
+    color-scheme: dark light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background;
+  }
+
+  img,
+  picture,
+  svg,
+  video {
+    @apply block max-w-full;
+  }
+
+  header nav a {
+    @apply m-auto;
+  }
+
+  header + div > * {
+    @apply m-auto;
+  }
+
+  header + div > div {
+    @apply flex max-w-[80%] flex-wrap gap-2;
+  }
+}
+
+@layer components {
+  .home-page-pill {
+    @apply rounded-e-full rounded-s-full border-2 px-4 py-1 text-xs;
+  }
+
+  .home-page-social {
+    @apply flex aspect-square h-10 rounded-xl border-2 duration-300 hover:-translate-y-2;
+  }
+}
