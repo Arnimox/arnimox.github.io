@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Arnimox</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/11b5924767.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="sticky">
+      <div class="flex h-16 justify-between p-3 landscape:md:hidden">
+        <a href="../pages"> <img src="../images/favicon.png" alt="Website favicon" class="h-full rounded-xl" /> </a>
+        <button type="button" title="Toggle Header Menu" id="header-menu-button">
+          <i class="fa-solid fa-bars my-auto h-8"></i>
+        </button>
+      </div>
+      <nav id="header-menu" class="hidden flex-col gap-3 pb-3 landscape:md:m-auto landscape:md:flex landscape:md:h-16 landscape:md:w-max landscape:md:flex-row landscape:md:justify-evenly landscape:md:gap-20 landscape:md:p-0">
+        <a href="../pages">HOME</a>
+        <a href="./aboutme">ABOUT ME</a>
+        <a href="./projects">PROJECTS</a>
+        <a href="./contactme">CONTACT ME</a>
+      </nav>
+    </header>
+    <div class="absolute left-0 right-0 top-56 mx-auto flex flex-col gap-10">
+      <img src="../images/portrait-ai.png" alt="Profile picture" class="w-1/2 max-w-xs rounded-full" />
+      <h2 class="text-2xl font-bold">Max Orin</h2>
+      <div id="home-page-pill-container"></div>
+      <div id="home-page-social-container" class="justify-center"></div>
+    </div>
+    <footer class="absolute bottom-3 left-0 right-0 mx-auto flex w-max flex-col gap-3">
+      <div class="mx-auto h-[2px] w-72 rounded-full bg-secondary max-w-[70vw]"></div>
+      <p id="copyright-text" class="m-auto"></p>
+    </footer>
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>
