@@ -1,3 +1,28 @@
+const RandomColorHex = () => {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+
+    return color;
+}
+
+const ShuffleArray = (array) => {
+    let currentIndex = array.length, randomIndex;
+
+    while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+}
+
 document.getElementById("header-menu-button").addEventListener("click", event => {
     const currentlyToggled = event.target.getAttribute("data-toggled");
 
@@ -7,25 +32,27 @@ document.getElementById("header-menu-button").addEventListener("click", event =>
 });
 
 const pillContents = [
-    { name: "M", color: "#FF7F50" },
-    { name: Math.floor((new Date() - new Date('09/26/2005')) / (1000 * 60 * 60 * 24) / 365), color: "#008080" },
-    { name: "New York", color: "#40E0D0" },
-    { name: "C#", color: "#FFDB58" },
-    { name: "Python", color: "#BCB88A" },
-    { name: "Javascript", color: "#E2725B" },
-    { name: "Webdev", color: "#E0B0FF" },
-    { name: "Swift", color: "#808000" },
-    { name: "NodeJS", color: "#B7410E" },
-    { name: "DiscordJS", color: "#DE5D83" },
-    { name: "tModLoader", color: "#F7E7CE" }
+    "M",
+    Math.floor((new Date() - new Date('09/26/2005')) / (1000 * 60 * 60 * 24) / 365),
+    "New York",
+    "C#",
+    "Python",
+    "Javascript",
+    "Webdev",
+    "Swift",
+    "NodeJS",
+    "DiscordJS",
+    "tModLoader"
 ]
 
-pillContents.forEach(e => {
+ShuffleArray(pillContents).forEach(e => {
+    const randomColor = '#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
+
     const pill = document.createElement("div");
-    pill.textContent = e.name;
+    pill.textContent = e;
     pill.classList.add("home-page-pill");
-    pill.style.borderColor = e.color;
-    pill.style.backgroundColor = `${e.color}80`;
+    pill.style.borderColor = randomColor;
+    pill.style.backgroundColor = `${randomColor}80`;
 
     document.getElementById("home-page-pill-container").appendChild(pill);
 });
@@ -39,7 +66,7 @@ const socialContents = [
     { name: "steam", color: "#0066CC", link: "https://steamcommunity.com/id/arnimox/" }
 ]
 
-socialContents.forEach(e => {
+ShuffleArray(socialContents).forEach(e => {
     const social = document.createElement("a");
     social.href = e.link;
     social.target = "_blank";
