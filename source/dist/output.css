@@ -607,10 +607,6 @@ header + div > div {
   position: sticky;
 }
 
-.bottom-3 {
-  bottom: 0.75rem;
-}
-
 .left-0 {
   left: 0px;
 }
@@ -635,18 +631,6 @@ header + div > div {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .flex {
@@ -750,6 +734,22 @@ header + div > div {
 
 @media (orientation: landscape) {
   @media (min-width: 768px) {
+    .landscape\:md\:top-32 {
+      top: 8rem;
+    }
+
+    .landscape\:md\:top-36 {
+      top: 9rem;
+    }
+
+    .landscape\:md\:top-40 {
+      top: 10rem;
+    }
+
+    .landscape\:md\:top-44 {
+      top: 11rem;
+    }
+
     .landscape\:md\:m-auto {
       margin: auto;
     }
