@@ -23,62 +23,58 @@ const ShuffleArray = (array) => {
     return array;
 }
 
-document.getElementById("header-menu-button").addEventListener("click", event => {
-    const currentlyToggled = event.target.getAttribute("data-toggled");
+const CreatePills = () => {
+    const pillContents = [
+        "M",
+        Math.floor((new Date() - new Date('09/26/2005')) / (1000 * 60 * 60 * 24) / 365),
+        "New York",
+        "C#",
+        "Python",
+        "Javascript",
+        "Typescript",
+        "HTML",
+        "CSS",
+        "Swift",
+        "NodeJS",
+        "DiscordJS",
+        "tModLoader"
+    ]
 
-    document.getElementById("header-menu").classList.toggle("flex", currentlyToggled != "true");
-    document.getElementById("header-menu").classList.toggle("hidden", currentlyToggled == "true");
-    event.target.setAttribute("data-toggled", currentlyToggled == "true" ? "false" : "true");
-});
+    ShuffleArray(pillContents).forEach(e => {
+        const randomColor = '#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
 
-const pillContents = [
-    "M",
-    Math.floor((new Date() - new Date('09/26/2005')) / (1000 * 60 * 60 * 24) / 365),
-    "New York",
-    "C#",
-    "Python",
-    "Javascript",
-    "Webdev",
-    "Swift",
-    "NodeJS",
-    "DiscordJS",
-    "tModLoader"
-]
+        const pill = document.createElement("div");
+        pill.textContent = e;
+        pill.classList.add("home-page-pill");
+        pill.style.borderColor = randomColor;
+        pill.style.backgroundColor = `${randomColor}80`;
 
-ShuffleArray(pillContents).forEach(e => {
-    const randomColor = '#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
+        document.getElementById("home-page-pill-container").appendChild(pill);
+    });
+}
 
-    const pill = document.createElement("div");
-    pill.textContent = e;
-    pill.classList.add("home-page-pill");
-    pill.style.borderColor = randomColor;
-    pill.style.backgroundColor = `${randomColor}80`;
+const CreateSocialButtons = () => {
+    const socialContents = [
+        { name: "instagram", color: "#833AB4", link: "https://www.instagram.com/max.a.2023/" },
+        { name: "github", color: "#000000", link: "https://github.com/Arnimox" },
+        { name: "spotify", color: "#1DB954", link: "https://open.spotify.com/user/g0lfyn59675wgm7bbybmn3r2y" },
+        { name: "youtube", color: "#FF0000", link: "https://www.youtube.com/channel/UCu-Z9KaUWKAzTFeoMCOlMVA" },
+        { name: "twitch", color: "#9146FF", link: "https://www.twitch.tv/arnimox" },
+        { name: "steam", color: "#0066CC", link: "https://steamcommunity.com/id/arnimox/" }
+    ]
 
-    document.getElementById("home-page-pill-container").appendChild(pill);
-});
+    ShuffleArray(socialContents).forEach(e => {
+        const social = document.createElement("a");
+        social.href = e.link;
+        social.target = "_blank";
+        social.classList.add("social");
+        social.style.borderColor = e.color;
+        social.style.backgroundColor = `${e.color}80`;
 
-const socialContents = [
-    { name: "instagram", color: "#833AB4", link: "https://www.instagram.com/max.a.2023/" },
-    { name: "github", color: "#000000", link: "https://github.com/Arnimox" },
-    { name: "spotify", color: "#1DB954", link: "https://open.spotify.com/user/g0lfyn59675wgm7bbybmn3r2y" },
-    { name: "youtube", color: "#FF0000", link: "https://www.youtube.com/channel/UCu-Z9KaUWKAzTFeoMCOlMVA" },
-    { name: "twitch", color: "#9146FF", link: "https://www.twitch.tv/arnimox" },
-    { name: "steam", color: "#0066CC", link: "https://steamcommunity.com/id/arnimox/" }
-]
+        document.getElementsByClassName("social-container")[0].appendChild(social);
 
-ShuffleArray(socialContents).forEach(e => {
-    const social = document.createElement("a");
-    social.href = e.link;
-    social.target = "_blank";
-    social.classList.add("home-page-social");
-    social.style.borderColor = e.color;
-    social.style.backgroundColor = `${e.color}80`;
-
-    document.getElementById("home-page-social-container").appendChild(social);
-
-    const socialIcon = document.createElement("i");
-    socialIcon.className = `fa-brands fa-${e.name} m-auto h-4/6`;
-    social.appendChild(socialIcon);
-});
-
-document.getElementById("copyright-text").textContent = `Copyright © ${new Date().getFullYear()} Max Orin`
+        const socialIcon = document.createElement("i");
+        socialIcon.className = `fa-brands fa-${e.name} m-auto h-4/6`;
+        social.appendChild(socialIcon);
+    });
+}
