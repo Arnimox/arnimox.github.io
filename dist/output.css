@@ -612,10 +612,10 @@ header + div > div {
   width: 24rem;
   flex-direction: column;
   gap: 1.25rem;
+  text-align: center;
 }
 
 #project-info-container > div > h2 {
-  text-align: center;
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
@@ -625,10 +625,7 @@ header + div > div {
   margin-right: auto;
   aspect-ratio: 1 / 1;
   width: 10rem;
-}
-
-#project-info-container > div > p {
-  text-align: center;
+  border-radius: 0.75rem;
 }
 
 .sticky {
