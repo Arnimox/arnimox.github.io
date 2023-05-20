@@ -29,7 +29,7 @@ const CreateHeader = (subpage) => {
 
 const CreateFooter = () => {
   const footerHTML = `
-    <footer class="m-auto mt-10 flex w-max flex-col gap-3">
+    <footer class="mx-auto my-10 flex w-max flex-col gap-3">
     <div class="mx-auto h-[2px] w-72 max-w-[70vw] rounded-full bg-secondary"></div>
     <p id="copyright-text" class="m-auto"></p>
     </footer>
