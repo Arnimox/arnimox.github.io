@@ -607,6 +607,30 @@ header + div > div {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+#project-info-container > div {
+  display: flex;
+  width: 24rem;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+#project-info-container > div > h2 {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+#project-info-container > div > img {
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 1 / 1;
+  width: 10rem;
+}
+
+#project-info-container > div > p {
+  text-align: center;
+}
+
 .sticky {
   position: sticky;
 }
@@ -620,13 +644,22 @@ header + div > div {
   margin-right: auto;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.mb-7 {
+  margin-bottom: 1.75rem;
 }
 
 .mt-14 {
@@ -669,6 +702,10 @@ header + div > div {
   width: 80%;
 }
 
+.w-5\/6 {
+  width: 83.333333%;
+}
+
 .w-72 {
   width: 18rem;
 }
@@ -690,12 +727,20 @@ header + div > div {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .justify-center {
   justify-content: center;
 }
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .gap-10 {
@@ -708,6 +753,10 @@ header + div > div {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-y-14 {
+  row-gap: 3.5rem;
 }
 
 .rounded-full {
@@ -738,6 +787,11 @@ header + div > div {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .font-bold {
@@ -785,10 +839,6 @@ header + div > div {
   }
 
   @media (min-width: 1280px) {
-    .landscape\:xl\:left-0 {
-      left: 0px;
-    }
-
     .landscape\:xl\:m-auto {
       margin: auto;
     }
@@ -805,12 +855,20 @@ header + div > div {
       margin-top: 20vh;
     }
 
+    .landscape\:xl\:w-1\/2 {
+      width: 50%;
+    }
+
     .landscape\:xl\:w-\[70vw\] {
       width: 70vw;
     }
 
     .landscape\:xl\:flex-row {
       flex-direction: row;
+    }
+
+    .landscape\:xl\:gap-y-10 {
+      row-gap: 2.5rem;
     }
 
     .landscape\:xl\:self-start {

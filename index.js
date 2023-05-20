@@ -29,6 +29,7 @@ const CreatePills = () => {
         Math.floor((new Date() - new Date('09/26/2005')) / (1000 * 60 * 60 * 24) / 365),
         "New York",
         "C#",
+        ".NET",
         "Python",
         "Javascript",
         "Typescript",
@@ -47,7 +48,7 @@ const CreatePills = () => {
         pill.textContent = e;
         pill.classList.add("home-page-pill");
         pill.style.borderColor = randomColor;
-        pill.style.backgroundColor = `${randomColor}80`;
+        pill.style.backgroundColor = randomColor + "80";
 
         document.getElementById("home-page-pill-container").appendChild(pill);
     });
@@ -69,7 +70,7 @@ const CreateSocialButtons = () => {
         social.target = "_blank";
         social.classList.add("social");
         social.style.borderColor = e.color;
-        social.style.backgroundColor = `${e.color}80`;
+        social.style.backgroundColor = e.color + "80";
 
         document.getElementsByClassName("social-container")[0].appendChild(social);
 

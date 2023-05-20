@@ -56,4 +56,20 @@
   .social {
     @apply flex aspect-square h-10 rounded-xl border-2 duration-300 hover:-translate-y-2;
   }
+
+  #project-info-container > div {
+    @apply flex w-96 flex-col gap-5;
+  }
+
+  #project-info-container > div > h2 {
+    @apply text-center text-xl;
+  }
+
+  #project-info-container > div > img {
+    @apply mx-auto aspect-square w-40;
+  }
+
+  #project-info-container > div > p {
+    @apply text-center;
+  }
 }
