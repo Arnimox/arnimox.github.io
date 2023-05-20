@@ -59,37 +59,30 @@ const projectInfo = [
     },
     {
         "name": "2048 In Console",
-        "thumbnail": "default.png",
         "description": "A Python script that allows the user to play 2048 in the console."
     },
     {
         "name": "Hangman Expert",
-        "thumbnail": "default.png",
         "description": "A Python script that emulates a game of hangman, wherein the program uses several algorithms to try to guess the word in the least amount of turns."
     },
     {
         "name": "Lagrange Challenge",
-        "thumbnail": "default.png",
         "description": "A .Net script that uses Lagrangian interpolation to figure out the simplest function curve that goes through a set of given points."
     },
     {
         "name": "Shove-It In Console",
-        "thumbnail": "default.png",
         "description": "A Python script that allows the user to play Shove-It in the console."
     },
     {
         "name": "Snake In Console",
-        "thumbnail": "default.png",
         "description": "A Python script that allows the user to play Snake in the console."
     },
     {
         "name": "Tetris In Console",
-        "thumbnail": "default.png",
         "description": "A Python script that allows the user to play Tetris in the console."
     },
     {
         "name": "7-Segment Sign",
-        "thumbnail": "default.png",
         "description": "A Javascript program that displays a given word using 7 segments, mimicing the look and limitations of 7-segment displays."
     },
     {
@@ -99,7 +92,6 @@ const projectInfo = [
     },
     {
         "name": "Sequence Memory Game",
-        "thumbnail": "default.png",
         "description": "An unpublished iOS app written in Swift that allows the user to play a sequential memory game."
     },
 ]

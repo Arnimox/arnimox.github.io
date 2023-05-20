@@ -58,18 +58,14 @@
   }
 
   #project-info-container > div {
-    @apply flex w-96 flex-col gap-5;
+    @apply flex w-96 flex-col gap-5 text-center;
   }
 
   #project-info-container > div > h2 {
-    @apply text-center text-xl;
+    @apply text-xl;
   }
 
   #project-info-container > div > img {
-    @apply mx-auto aspect-square w-40;
-  }
-
-  #project-info-container > div > p {
-    @apply text-center;
+    @apply mx-auto aspect-square w-40 rounded-xl;
   }
 }

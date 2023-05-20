@@ -27,21 +27,24 @@ const CreatePills = () => {
     const pillContents = [
         "M",
         Math.floor((new Date() - new Date('09/26/2005')) / (1000 * 60 * 60 * 24) / 365),
-        "New York",
-        "C#",
-        ".NET",
-        "Python",
-        "Javascript",
-        "Typescript",
-        "HTML",
-        "CSS",
-        "Swift",
-        "NodeJS",
-        "DiscordJS",
-        "tModLoader"
-    ]
+        "New York"
+    ].concat(ShuffleArray(
+        [
+            "C#",
+            ".NET",
+            "Python",
+            "Javascript",
+            "Typescript",
+            "HTML",
+            "CSS",
+            "Swift",
+            "NodeJS",
+            "DiscordJS",
+            "tModLoader"
+        ]
+    ));
 
-    ShuffleArray(pillContents).forEach(e => {
+    pillContents.forEach(e => {
         const randomColor = '#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
 
         const pill = document.createElement("div");
@@ -61,7 +64,8 @@ const CreateSocialButtons = () => {
         { name: "spotify", color: "#1DB954", link: "https://open.spotify.com/user/g0lfyn59675wgm7bbybmn3r2y" },
         { name: "youtube", color: "#FF0000", link: "https://www.youtube.com/channel/UCu-Z9KaUWKAzTFeoMCOlMVA" },
         { name: "twitch", color: "#9146FF", link: "https://www.twitch.tv/arnimox" },
-        { name: "steam", color: "#0066CC", link: "https://steamcommunity.com/id/arnimox/" }
+        { name: "steam", color: "#0066CC", link: "https://steamcommunity.com/id/arnimox/" },
+        { name: "discord", color: "#5865F2", link: "https://discordapp.com/users/509509052573810720" }
     ]
 
     ShuffleArray(socialContents).forEach(e => {
