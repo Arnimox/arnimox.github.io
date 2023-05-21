@@ -422,6 +422,10 @@ video {
   display: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 *,
   *::before,
   *::after {
@@ -434,7 +438,7 @@ video {
   font-family: 'Exo 2', sans-serif;
   letter-spacing: 0.025em;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(237 233 232 / var(--tw-text-opacity));
 }
 
 html {
@@ -607,6 +611,45 @@ header + div > div {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+#project-filters-container > * {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#project-filters-container > button {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: -moz-max-content;
+  height: max-content;
+  width: -moz-max-content;
+  width: max-content;
+  white-space: nowrap;
+  border-radius: 9999px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(58 46 44 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(58 46 44 / var(--tw-bg-opacity));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  text-align: center;
+  transition-duration: 300ms;
+}
+
+#project-filters-container > button:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+
+#project-filters-container > button[data-toggled="true"] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 #project-info-container > div {
   display: flex;
   width: 24rem;
@@ -649,10 +692,6 @@ header + div > div {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
-}
-
-.mb-14 {
-  margin-bottom: 3.5rem;
 }
 
 .mb-7 {
@@ -728,6 +767,10 @@ header + div > div {
   flex-wrap: wrap;
 }
 
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -752,8 +795,12 @@ header + div > div {
   gap: 1.25rem;
 }
 
-.gap-y-14 {
-  row-gap: 3.5rem;
+.gap-y-10 {
+  row-gap: 2.5rem;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
 }
 
 .rounded-full {
@@ -764,13 +811,28 @@ header + div > div {
   border-radius: 0.75rem;
 }
 
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(86 69 67 / var(--tw-bg-opacity));
+}
+
 .bg-secondary {
   --tw-bg-opacity: 1;
-  background-color: rgb(38 30 29 / var(--tw-bg-opacity));
+  background-color: rgb(58 46 44 / var(--tw-bg-opacity));
 }
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pb-3 {
@@ -793,6 +855,10 @@ header + div > div {
 
 .font-bold {
   font-weight: 700;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 @media (orientation: landscape) {
@@ -820,6 +886,10 @@ header + div > div {
 
     .landscape\:md\:flex-row {
       flex-direction: row;
+    }
+
+    .landscape\:md\:justify-center {
+      justify-content: center;
     }
 
     .landscape\:md\:justify-evenly {
@@ -860,12 +930,21 @@ header + div > div {
       width: 70vw;
     }
 
+    .landscape\:xl\:w-\[80vw\] {
+      width: 80vw;
+    }
+
+    .landscape\:xl\:w-max {
+      width: -moz-max-content;
+      width: max-content;
+    }
+
     .landscape\:xl\:flex-row {
       flex-direction: row;
     }
 
-    .landscape\:xl\:gap-y-10 {
-      row-gap: 2.5rem;
+    .landscape\:xl\:justify-center {
+      justify-content: center;
     }
 
     .landscape\:xl\:self-start {

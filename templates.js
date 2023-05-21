@@ -37,7 +37,7 @@ const CreateFooter = () => {
 
   document.body.innerHTML += footerHTML;
 
-  document.getElementById("copyright-text").textContent = `Copyright © ${new Date().getFullYear()} Max Orin`;
+  document.getElementById("copyright-text").textContent = `Copyright © ${new Date().getFullYear()} Arnimox`;
 }
 
 CreateFooter();

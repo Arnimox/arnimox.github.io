@@ -4,15 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects - Arnimox</title>
+    <meta content="Projects - Arnimox" property="og:title" />
+    <meta content="Arnimox: Experienced Full Stack Developer" property="og:description" />
+    <meta content="https://arnimox.github.io/projects" property="og:url" />
+    <meta content="./images/favicon" property="og:image" />
+    <meta content="#800000" data-react-helmet="true" name="theme-color" />
     <link rel="stylesheet" href="../dist/output.css" />
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
     <script src="https://kit.fontawesome.com/11b5924767.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1 class="mb-7 mt-14 text-center text-4xl font-bold">My Projects</h1>
-    <p class="m-auto mb-14 w-5/6 landscape:xl:w-1/2">Note: most of these projects are either currently dead, on-hold until further notice, or small, 1-hour coding challenges. I felt the need to include everything because I feel like excluding projects that aren't published would lead to a lot of misconceptions about what I can do / what I've done in the past.</p>
-    <div id="project-info-container" class="mx-auto mt-14 flex w-4/5 flex-wrap justify-evenly gap-5 gap-y-14 landscape:xl:w-[70vw] landscape:xl:gap-y-10"></div>
-    <script src="./project-info.js"></script>
+    <div class="mx-auto w-4/5 landscape:xl:w-[80vw]">
+      <h1 class="mb-7 mt-14 text-center text-4xl font-bold">My Projects</h1>
+      <div id="project-filters-container" class="flex w-5/6 flex-nowrap gap-5 overflow-x-scroll rounded-xl bg-primary px-3 py-2 landscape:md:w-max landscape:md:justify-center"></div>
+      <div id="project-info-container" class="mx-auto mt-14 flex flex-wrap justify-evenly gap-y-10"></div>
+    </div>
+    <script src="./projects.js"></script>
     <script src="../templates.js"></script>
     <script>
       CreateHeader(true);
