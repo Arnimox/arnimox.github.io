@@ -638,16 +638,9 @@ header + div > div {
   transition-duration: 300ms;
 }
 
-#project-filters-container > button:hover {
+#project-filters-container > button[data-toggled="true"] {
   --tw-border-opacity: 1;
   border-color: rgb(96 165 250 / var(--tw-border-opacity));
-}
-
-#project-filters-container > button[data-toggled="true"] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 #project-info-container > div {
@@ -759,6 +752,15 @@ header + div > div {
   max-width: 20rem;
 }
 
+.max-w-max {
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.max-w-\[80vw\] {
+  max-width: 80vw;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -777,6 +779,10 @@ header + div > div {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .justify-evenly {
@@ -922,10 +928,6 @@ header + div > div {
       margin-top: 20vh;
     }
 
-    .landscape\:xl\:w-1\/2 {
-      width: 50%;
-    }
-
     .landscape\:xl\:w-\[70vw\] {
       width: 70vw;
     }
@@ -934,17 +936,8 @@ header + div > div {
       width: 80vw;
     }
 
-    .landscape\:xl\:w-max {
-      width: -moz-max-content;
-      width: max-content;
-    }
-
     .landscape\:xl\:flex-row {
       flex-direction: row;
-    }
-
-    .landscape\:xl\:justify-center {
-      justify-content: center;
     }
 
     .landscape\:xl\:self-start {
