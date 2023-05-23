@@ -84,4 +84,13 @@
   #project-info-container > div > img {
     @apply mx-auto aspect-square w-40 rounded-xl;
   }
+
+  #contact-form input,
+  #contact-form textarea {
+    @apply w-full rounded-lg border-2 border-primary bg-background p-4 outline-none;
+  }
+
+  #contact-form textarea {
+    @apply !h-40;
+  }
 }
