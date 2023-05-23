@@ -664,6 +664,24 @@ header + div > div {
   border-radius: 0.75rem;
 }
 
+#contact-form input,
+  #contact-form textarea {
+  width: 100%;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(86 69 67 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 16 15 / var(--tw-bg-opacity));
+  padding: 1rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+#contact-form textarea {
+  height: 10rem !important;
+}
+
 .sticky {
   position: sticky;
 }
@@ -744,12 +762,12 @@ header + div > div {
   width: max-content;
 }
 
-.max-w-\[70vw\] {
-  max-width: 70vw;
+.w-full {
+  width: 100%;
 }
 
-.max-w-xs {
-  max-width: 20rem;
+.max-w-\[70vw\] {
+  max-width: 70vw;
 }
 
 .max-w-max {
@@ -757,8 +775,24 @@ header + div > div {
   max-width: max-content;
 }
 
-.max-w-\[80vw\] {
-  max-width: 80vw;
+.max-w-xs {
+  max-width: 20rem;
+}
+
+.max-w-\[40vw\] {
+  max-width: 40vw;
+}
+
+.max-w-\[60vw\] {
+  max-width: 60vw;
+}
+
+.max-w-\[50vw\] {
+  max-width: 50vw;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .flex-col {
@@ -779,10 +813,6 @@ header + div > div {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
 }
 
 .justify-evenly {
@@ -817,6 +847,25 @@ header + div > div {
   border-radius: 0.75rem;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
+.border-primary {
+  --tw-border-opacity: 1;
+  border-color: rgb(86 69 67 / var(--tw-border-opacity));
+}
+
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(58 46 44 / var(--tw-border-opacity));
+}
+
+.border-accent {
+  --tw-border-opacity: 1;
+  border-color: rgb(18 22 23 / var(--tw-border-opacity));
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(86 69 67 / var(--tw-bg-opacity));
@@ -831,6 +880,10 @@ header + div > div {
   padding: 0.75rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -839,6 +892,16 @@ header + div > div {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-3 {
@@ -854,6 +917,11 @@ header + div > div {
   line-height: 2rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -865,6 +933,13 @@ header + div > div {
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+@media (min-width: 640px) {
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (orientation: landscape) {
@@ -930,10 +1005,6 @@ header + div > div {
 
     .landscape\:xl\:w-\[70vw\] {
       width: 70vw;
-    }
-
-    .landscape\:xl\:w-\[80vw\] {
-      width: 80vw;
     }
 
     .landscape\:xl\:flex-row {

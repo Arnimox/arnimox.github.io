@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me - Arnimox</title>
+    <meta content="Contact Me - Arnimox" property="og:title" />
+    <meta content="Arnimox: Experienced Full Stack Developer" property="og:description" />
+    <meta content="https://arnimox.github.io/images/favicon.png" property="og:image" />
+    <meta content="https://arnimox.github.io/contactme" property="og:url" />
+    <meta content="#800000" data-react-helmet="true" name="theme-color" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/11b5924767.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="mx-auto flex flex-col">
+      <h1 class="mb-7 mt-14 text-center text-3xl font-bold sm:text-4xl">Connect With Me</h1>
+      <form class="m-auto flex w-5/6 max-w-3xl flex-col gap-5" id="contact-form">
+        <input type="text" name="name" id="contact-name" placeholder="Name" required />
+        <input type="text" name="email" id="contact-email" placeholder="Email" required />
+        <textarea id="content" name="content" placeholder="Message"></textarea>
+        <button type="submit" class="w-max border-2 border-primary bg-secondary px-6 py-4 m-auto rounded-full">Send Message</button>
+      </form>
+    </div>
+    <script src="../templates.js"></script>
+    <script>
+      CreateHeader(true);
+    </script>
+  </body>
+</html>
