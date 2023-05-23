@@ -66,11 +66,11 @@
   }
 
   #project-filters-container > button {
-    @apply my-auto h-max w-max whitespace-nowrap rounded-full border-2 border-secondary bg-secondary px-3 py-1 text-center duration-300;
+    @apply my-auto h-max w-max whitespace-nowrap rounded-full border-2 border-secondary bg-secondary px-3 py-1 text-center duration-300 hover:border-sky-300;
   }
 
   #project-filters-container > button[data-toggled="true"] {
-    @apply border-blue-400;
+    @apply border-sky-600;
   }
 
   #project-info-container > div {
@@ -85,9 +85,13 @@
     @apply mx-auto aspect-square w-40 rounded-xl;
   }
 
-  #contact-form input,
+  #contact-form input:not([type="submit"]),
   #contact-form textarea {
     @apply w-full rounded-lg border-2 border-primary bg-background p-4 outline-none;
+  }
+
+  #contact-form input[type="submit"] {
+    @apply border-4;
   }
 
   #contact-form textarea {
