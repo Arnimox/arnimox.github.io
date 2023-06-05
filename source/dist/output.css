@@ -669,6 +669,10 @@ header + div > div {
   border-radius: 0.75rem;
 }
 
+/* #project-info-container > div > a {
+    @apply mx-auto w-max  rounded-full border-2 border-text px-12 py-3 text-lg font-bold;
+  } */
+
 #contact-form input:not([type="submit"]),
   #contact-form textarea {
   width: 100%;
@@ -689,6 +693,7 @@ header + div > div {
 
 #contact-form textarea {
   height: 10rem !important;
+  resize: vertical;
 }
 
 .sticky {

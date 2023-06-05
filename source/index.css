@@ -85,6 +85,10 @@
     @apply mx-auto aspect-square w-40 rounded-xl;
   }
 
+  /* #project-info-container > div > a {
+    @apply mx-auto w-max  rounded-full border-2 border-text px-12 py-3 text-lg font-bold;
+  } */
+
   #contact-form input:not([type="submit"]),
   #contact-form textarea {
     @apply w-full rounded-lg border-2 border-primary bg-background p-4 outline-none;
@@ -95,6 +99,6 @@
   }
 
   #contact-form textarea {
-    @apply !h-40;
+    @apply !h-40 resize-y;
   }
 }
